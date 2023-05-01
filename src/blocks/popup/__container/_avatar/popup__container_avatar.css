@@ -1,4 +1,4 @@
-.popup__container_form {
+.popup__container_avatar {
     background-color: #fff;
     border-radius: 10px;
     display: flex;
@@ -10,7 +10,7 @@
 }
 
 @media screen and (max-width: 600px) {
-    .popup__container_form {
+    .popup__container_avatar {
         width: 282px;
         padding: 0 22px;
     }

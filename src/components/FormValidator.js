@@ -1,6 +1,6 @@
 export default class FormValidator {
-    constructor(listForValidation, formElement) {
-        this._formSelectors = listForValidation;
+    constructor(formSelectors, formElement) {
+        this._formSelectors = formSelectors;
         this._formElement = formElement;
         this._inputList = Array.from(this._formElement.querySelectorAll(this._formSelectors.inputElement));
         this._settingButton = this._formElement.querySelector(this._formSelectors.buttonPopup);

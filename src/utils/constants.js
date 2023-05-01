@@ -1,5 +1,6 @@
 // Контейнер для темплейта
 export const container = document.querySelector('.elements');
+export const templateCard = document.querySelector('#template')
 
 // Основной класс попапов
 export const popups = document.querySelectorAll('.popup');
@@ -11,10 +12,13 @@ export const closePopupButtons = document.querySelectorAll('.popup__close');
 export const popupProfile = document.querySelector('#edit');
 export const popupCard = document.querySelector('#add');
 export const popupImage = document.querySelector('#popup-image');
+export const popupDelete = document.querySelector('#popup-delete');
+export const popupAvatar = document.querySelector('#redactAvatar');
 
 // Формы попапов
 export const formAdd = document.querySelector('.popup__form-add');
 export const formEdit = document.querySelector('.popup__form-edit');
+export const formAvatar = popupDelete.querySelector('.popup__form-avatar')
 
 // Данные (текст) профиля
 // export const profileName = document.querySelector('.profile__name');
@@ -31,6 +35,7 @@ export const nameInputLink = document.querySelector('.popup__input_link-to-image
 // Кнопки открытия попапов с формами
 export const profileEdit = document.querySelector('.profile__edit');
 export const addButton = document.querySelector('.profile__add');
+export const editAvatarButton = document.querySelector('.profile__avatar-button');
 
 // Элементы форм
 export const listForValidation = ({
