@@ -36,7 +36,7 @@ const handleCardClick = (name, link) => {
     popupWithImage.openPopup(name, link);
 }
 const handleCardPopupDelete = (cardId, card) => {
-    popupDeleteCard.openPopup(cardId, card);
+    popupWithConfirmation.openPopup(cardId, card);
 }
 
 // создание карточки
@@ -80,8 +80,8 @@ const userInfo = new UserInfo({ name: '.profile__name', about: '.profile__about-
 const popupNewAvatar = new PopupWithForm(popupAvatar, ({ avatar }) => {
     popupNewAvatar.renderLoading(true);
     api.userAvatar({ avatar })
-        .then(({ avatar }) => {
-            userInfo.setUserInfo({ avatar });
+        .then(( res ) => {
+            userInfo.setUserInfo(res);
             popupNewAvatar.closePopup();
         })
         .finally(() => {
@@ -115,13 +115,14 @@ profileEdit.addEventListener('click', () => {
     popupInfo.setInputValues(userInfo.getUserInfo());
 });
 popupInfo.setEventListeners();
+
 // попап картинки
 const popupNewImage = new PopupWithForm(popupCard, (card) => {
     popupNewImage.renderLoading(true);
     api.postNewCard(card)
         .then((res) => {
             popupNewImage.closePopup();
-            cards.addItem(createCard(res));
+            cards.prependItem(createCard(res));
         })
         .catch(console.log)
         .finally(() => {
@@ -137,19 +138,19 @@ popupNewImage.setEventListeners();
 const popupWithImage = new PopupWithImage(popupImage);
 popupWithImage.setEventListeners();
 // удаление карточки
-const popupDeleteCard = new PopupWithConfirmation(popupDelete, (card) => {
-    popupDeleteCard.renderLoading(true);
-    api.deleteCard(card.cardId)
+const popupWithConfirmation = new PopupWithConfirmation(popupDelete, () => {
+    popupWithConfirmation.renderLoading(true);
+    api.deleteCard(popupWithConfirmation.cardId)
         .then(() => {
-            popupDeleteCard.card.remove();
-            popupDeleteCard.closePopup();
+            popupWithConfirmation.card.remove();
+            popupWithConfirmation.closePopup();
         })
         .finally(() => {
-            popupDeleteCard.renderLoading(false)
+            popupWithConfirmation.renderLoading(false)
         })
-        .catch(err => console.log(err))
+        .catch(console.log)
 });
-popupDeleteCard.setEventListeners();
+popupWithConfirmation.setEventListeners();
 
 // валидации попапов 
 const formValiatorUserInfo = new FormValidator(listForValidation, formEdit);

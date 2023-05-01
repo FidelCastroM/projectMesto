@@ -17,17 +17,11 @@ export default class PopupWithConfirmation extends Popup {
         super.openPopup();
         this.cardId = cardId;
         this.card = card;
+        this._deleteButton.addEventListener('click', this._deleteCard);
     }
 
     closePopup() {
         super.closePopup();
-    }
-
-    setEventListeners() {
-        super.setEventListeners();
-        this._deleteButton.addEventListener('click', (evt) => {
-            evt.preventDefault();
-            this._deleteCard(this);
-        });
+        this._deleteButton.addEventListener('click', this._deleteCard);
     }
 }
