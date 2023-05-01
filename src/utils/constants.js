@@ -18,11 +18,7 @@ export const popupAvatar = document.querySelector('#redactAvatar');
 // Формы попапов
 export const formAdd = document.querySelector('.popup__form-add');
 export const formEdit = document.querySelector('.popup__form-edit');
-export const formAvatar = popupDelete.querySelector('.popup__form-avatar')
-
-// Данные (текст) профиля
-// export const profileName = document.querySelector('.profile__name');
-// export const profileAboutMe = document.querySelector('.profile__about-me');
+export const formAvatar = document.querySelector('.popup__form-avatar')
 
 // Инпуты попапа редактирования профиля
 export const nameInput = document.querySelector('.popup__input_key_name');
