@@ -54,6 +54,17 @@
                 </div>
             </li>
         </template>
+        <!--Попап добавления аватарки-->
+        <section class="popup popup_effect" id="redactAvatar">
+            <div class="popup__container popup__container_avatar">
+                <button aria-label="Закрытие" type="button" id="close-avatar" class="popup__close"></button>
+                <h2 class="popup__title">Обновить аватар</h2>
+                <form action="#" id="form-avatar" method="post" name="popup-form-adding" class="popup__form popup__form-avatar"
+                    novalidate>
+                    <input class="popup__input popup__input_denomination" type="text" name="avatar" id="avatar"
+                        autocomplete="off" value="" placeholder="Ссылка на аватарку" required>
+                    <span class="popup__input-error avatar-error"></span>
+                    <button aria-label="Создание" type="submit" class="popup__button popup__button-avatar">Сохранить</button>
 
         <!--Попап редактирования профиля-->
         <section class="popup popup_effect" id="edit">
@@ -61,13 +72,13 @@
                 <button aria-label="Закрытие" type="button" id="close-edit" class="popup__close"></button>
                 <h2 class="popup__title">Редактировать профиль</h2>
                 <form action="#" id="form-edit" method="post" name="popup-form-editing" class="popup__form popup__form-edit" novalidate>
-                            <input class="popup__input popup__input_key_name" type="text" name="forename" id="forename"
+                            <input class="popup__input popup__input_key_name" type="text" name="name" id="name"
                                 autocomplete="off" value="Жак-Ив Кусто" required minlength=2 maxlength=40>
-                            <span class="popup__input-error forename-error"></span>
+                            <span class="popup__input-error name-error"></span>
 
-                            <input class="popup__input popup__input_key_about-me" type="text" name="information" id="information"
+                            <input class="popup__input popup__input_key_about-me" type="text" name="about" id="about"
                                 autocomplete="off" value="Исследователь океана" required minlength=2 maxlength=200>
-                            <span class="popup__input-error information-error"></span>
+                            <span class="popup__input-error about-error"></span>
                         <button aria-label="Сохранение" type="submit" class="popup__button popup__button-edit">Сохранить</button>
                 </form>
             </div>
@@ -109,17 +120,6 @@
             </div>
         </section>
 
-        <!--Попап добавления аватарки-->
-        <section class="popup popup_effect" id="redactAvatar">
-            <div class="popup__container popup__container_avatar">
-                <button aria-label="Закрытие" type="button" id="close-avatar" class="popup__close"></button>
-                <h2 class="popup__title">Обновить аватар</h2>
-                <form action="#" id="form-avatar" method="post" name="popup-form-adding" class="popup__form popup__form-avatar"
-                    novalidate>
-                    <input class="popup__input popup__input_denomination" type="text" name="avatar" id="avatar"
-                        autocomplete="off" value="" placeholder="Ссылка на аватарку" required>
-                    <span class="popup__input-error avatar-error"></span>
-                    <button aria-label="Создание" type="submit" class="popup__button popup__button-avatar">Сохранить</button>
                 </form>
             </div>
         </section>

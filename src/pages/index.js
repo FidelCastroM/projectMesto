@@ -50,7 +50,14 @@ const handleCardPopupDelete = (cardId, card) => {
 
 // создание карточки
 function createCard(res) {
-    const card = new Card(userInfo.userId, res, '#template', handleCardClick, handleCardPopupDelete, handlePutLike, handleDeleteLike);
+    const card = new Card(
+    userInfo.userId,
+    res,
+    '#template',
+    handleCardClick,
+    handleCardPopupDelete,
+    handlePutLike,
+    handleDeleteLike);
     const newCard = card.generateCard();
     return newCard;
 }
@@ -79,7 +86,7 @@ const popupNewAvatar = new PopupWithForm(popupAvatar, ({ avatar }) => {
     popupNewAvatar.renderLoading(true);
     api.userAvatar({ avatar })
         .then(res => {
-            avatarInfo.setUserInfo(res);
+            userInfo.setUserInfo(res);
             popupNewAvatar.closePopup();
         })
         .finally(() => {
