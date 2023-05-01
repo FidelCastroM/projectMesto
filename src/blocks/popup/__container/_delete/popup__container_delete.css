@@ -4,7 +4,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 34px 36px 36px;
         position: fixed;
         width: 430px;
 }

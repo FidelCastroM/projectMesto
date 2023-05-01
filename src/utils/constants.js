@@ -20,14 +20,6 @@ export const formAdd = document.querySelector('.popup__form-add');
 export const formEdit = document.querySelector('.popup__form-edit');
 export const formAvatar = document.querySelector('.popup__form-avatar')
 
-// Инпуты попапа редактирования профиля
-export const nameInput = document.querySelector('.popup__input_key_name');
-export const jobInput = document.querySelector('.popup__input_key_about-me');
-
-// Инпуты попапа добавления карточки
-export const nameInputDenomination = document.querySelector('.popup__input_denomination');
-export const nameInputLink = document.querySelector('.popup__input_link-to-image');
-
 // Кнопки открытия попапов с формами
 export const profileEdit = document.querySelector('.profile__edit');
 export const addButton = document.querySelector('.profile__add');

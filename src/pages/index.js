@@ -93,7 +93,8 @@ popupNewAvatar.setEventListeners();
 
 editAvatarButton.addEventListener('click', () => {
     popupNewAvatar.openPopup();
-    formValiatorNewAvatar.resetValidation()
+    formValiatorNewAvatar.resetValidation();
+
 });
 //попап данных
 const popupInfo = new PopupWithForm(popupProfile, (card) => {

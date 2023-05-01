@@ -3,7 +3,7 @@ export default class PopupWithConfirmation extends Popup {
     constructor(popup, deleteCard) {
         super(popup);
         this._deleteCard = deleteCard;
-        this._deleteButton = this._popup.querySelector('.popup__button-delete');
+        this._deleteButton = this._popup.querySelector('.popup__button');
         this._deleteButtonText = this._deleteButton.textContent;
     }
     renderLoading(isLoading) {

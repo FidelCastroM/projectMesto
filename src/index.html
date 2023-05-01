@@ -60,7 +60,7 @@
                 <button aria-label="Закрытие" type="button" id="close-avatar" class="popup__close"></button>
                 <h2 class="popup__title">Обновить аватар</h2>
                 <form action="#" method="post" name="avatar" class="popup__form popup__form-avatar" novalidate>
-                    <input class="popup__input popup__input_avatar" type="url" name="avatar" id="avatar"
+                    <input class="popup__input popup__input_one" type="url" name="avatar" id="avatar"
                         autocomplete="off" value="" placeholder="Ссылка на аватарку" required>
                     <span class="avatar-error popup__input-error"></span>
                     <button aria-label="Создание" type="submit" class="popup__button popup__button-avatar">Сохранить</button>
@@ -74,11 +74,11 @@
                 <button aria-label="Закрытие" type="button" id="close-edit" class="popup__close"></button>
                 <h2 class="popup__title">Редактировать профиль</h2>
                 <form action="#" method="post" name="form-user" class="popup__form popup__form-edit" novalidate>
-                            <input class="popup__input popup__input_key_name" type="text" name="name" id="name"
+                            <input class="popup__input popup__input_one" type="text" name="name" id="name"
                                 autocomplete="off" value="" required minlength=2 maxlength=40>
                             <span class="name-error popup__input-error"></span>
 
-                            <input class="popup__input popup__input_key_about-me" type="text" name="about" id="description"
+                            <input class="popup__input popup__input_two" type="text" name="about" id="description"
                                 autocomplete="off" value="" required minlength=2 maxlength=200>
                             <span class="description-error popup__input-error"></span>
                         <button aria-label="Сохранение" type="submit" class="popup__button popup__button-edit">Сохранить</button>
@@ -92,11 +92,11 @@
                 <button aria-label="Закрытие" type="button" id="close-add" class="popup__close"></button>
                 <h2 class="popup__title">Новое место</h2>
                 <form action="#" method="post" name="add-card" class="popup__form popup__form-add" novalidate>
-                                <input class="popup__input popup__input_denomination" type="text" name="name" id="denomination"
+                                <input class="popup__input popup__input_one" type="text" name="name" id="denomination"
                                     autocomplete="off" value="" placeholder="Название" required minlength=2>
                                 <span class="denomination-error popup__input-error"></span>
 
-                                <input class="popup__input popup__input_link" type="url" name="link"
+                                <input class="popup__input popup__input_two" type="url" name="link"
                                     id="link" autocomplete="off" value="" placeholder="Ссылка на картинку" required>
                                 <span class="link-error popup__input-error"></span>
                         <button aria-label="Создание" type="submit" class="popup__button popup__button-add">Создать</button>
@@ -118,7 +118,7 @@
             <div class="popup__container popup__container_delete">
                 <button aria-label="Закрытие" type="button" id="close-delete" class="popup__close"></button>
                 <h2 class="popup__title">Вы уверены?</h2>
-                <button aria-label="Сохранение" type="submit" class="popup__button popup__button-delete">Да</button>
+                <button aria-label="Сохранение" type="submit" class="popup__button">Да</button>
             </div>
         </section>
     </body>
