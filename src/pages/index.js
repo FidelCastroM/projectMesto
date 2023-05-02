@@ -42,7 +42,7 @@ const handleCardPopupDelete = (cardId, card) => {
 // создание карточки
 function createCard(res) {
     const card = new Card(
-    userInfo.userId,
+    userInfo.getUserId(),
     res,
     '#template',
     handleCardClick,
@@ -141,15 +141,15 @@ popupWithImage.setEventListeners();
 // удаление карточки
 const popupWithConfirmation = new PopupWithConfirmation(popupDelete, () => {
     popupWithConfirmation.renderLoading(true);
-    api.deleteCard(popupWithConfirmation.cardId)
+    api.deleteCard(popupWithConfirmation.getCardId())
         .then(() => {
-            popupWithConfirmation.card.remove();
+            popupWithConfirmation.getCard().remove();
             popupWithConfirmation.closePopup();
         })
         .finally(() => {
-            popupWithConfirmation.renderLoading(false)
+            popupWithConfirmation.renderLoading(false);
         })
-        .catch(console.log)
+        .catch(console.log);
 });
 popupWithConfirmation.setEventListeners();
 

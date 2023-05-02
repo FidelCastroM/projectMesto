@@ -11,7 +11,8 @@
 5. Валидация форм для клиента.
 6. Весь код оформлен в силе Nested БЭМ.
 7. JavaScript код классов Card и FormValidator организован по стандартам ООП.
+8. Асинхронность.
 
 В доработках не вижу смысла, внешне всё выглядит предельно красиво, беспокоюсь только за исправность кода JS. Код, в случае ошибок готов исправить.
 
-Ссылка на работу GitHub Pages: https://github.com/FidelCastroM/project
+Ссылка на работу GitHub Pages: https://github.com/FidelCastroM/projectMesto

@@ -26,7 +26,9 @@ export default class Card {
 
     generateCard() {
         this._card = this._getTemplate();
-        this._ownerId !== this._userId ? this._deleteButton.style.display = "none" : "";
+        if (this._ownerId !== this._userId) {
+            this._deleteButton.classList.add('element__basket_hidden');
+        }
         this._counterLikes.textContent = this._summaryLikes;
         if (this.isLiked(this.likes)) { this._likeButton.classList.add('element__like_active') };
         this._setEventListeners();
