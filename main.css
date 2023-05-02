@@ -22,7 +22,8 @@
 .element__button-like{background-color:#fff;border:0;cursor:pointer;margin:0;padding:0}
 .element__like{margin:0}.element__like:hover{opacity:.5}
 .element__like_active{background:url(e787eeb70bb65b7b453a.svg)}
-.element__basket{margin:0}.element__basket:hover{opacity:.6}
+.element__basket{margin:0;opacity:1;visibility:visible}.element__basket:hover{opacity:.6}
+.element__basket_hidden{opacity:0;visibility:hidden}
 .element__like-quantity{color:#000;font-size:13px;font-style:normal;font-weight:400;line-height:16px;margin:3px 0 0;padding:0;text-align:center;width:10px}
 .element__box-like{align-items:center;display:flex;flex-direction:column;justify-content:center}
 .footer{margin:66px auto 0 0}@media screen and (max-width:600px){.footer{margin-left:19px;margin-top:48px}}
